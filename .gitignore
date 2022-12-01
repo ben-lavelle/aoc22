@@ -1,0 +1,14 @@
+# Manage environments and IDE
+.vscode/
+venv/
+.ipynb_checkpoints
+__pycache__
+
+# No raw data (all pdf files are sensitive)
+*.pdf
+*.csv
+*.dat
+*.txt
+
+# Keep config secret
+assets/config.py
