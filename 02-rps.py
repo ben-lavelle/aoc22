@@ -12,12 +12,9 @@ def judge_rps(opp, you)-> int:
     beats = {'A': 'Y', 'B': 'Z', 'C':'X'}
     draws = {'A': 'X', 'B': 'Y', 'C':'Z'}
     yours = {'X': 1  , 'Y': 2  , 'Z': 3 }
-    if you==beats[opp]:
-        return 6 + yours[you]
-    elif you==draws[opp]:
-        return 3 + yours[you]
-    else:
-        return 0 + yours[you]
+    return (  6 * int(you==beats[opp])
+            + 3 * int(you==draws[opp])
+            + yours[you])
 
 scores = starmap(judge_rps, rps_strategy)
 
